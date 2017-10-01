@@ -23,6 +23,7 @@ func eventMapping(cont *dc.APIContainers) common.MapStr {
 		"id":      cont.ID,
 		"name":    docker.ExtractContainerName(cont.Names),
 		"command": cont.Command,
+                "IPAddres": cont.Networks,
 		"image":   cont.Image,
 		"size": common.MapStr{
 			"root_fs": cont.SizeRootFs,
